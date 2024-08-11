@@ -19,6 +19,7 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Filament\Navigation\MenuItem;
 use App\Filament\Merchant\Pages\Settings;
+
 class MerchantPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
@@ -44,12 +45,11 @@ class MerchantPanelProvider extends PanelProvider
             ->discoverPages(in: app_path('Filament/Merchant/Pages'), for: 'App\\Filament\\Merchant\\Pages')
             ->pages([
                 Pages\Dashboard::class,
-                
+
             ])
             ->discoverWidgets(in: app_path('Filament/Merchant/Widgets'), for: 'App\\Filament\\Merchant\\Widgets')
             ->widgets([
                 Widgets\AccountWidget::class,
-                Widgets\CheckListWidget::class,
                 // Widgets\FilamentInfoWidget::class,
             ])
             ->middleware([
@@ -67,5 +67,4 @@ class MerchantPanelProvider extends PanelProvider
                 Authenticate::class,
             ]);
     }
-    
 }
