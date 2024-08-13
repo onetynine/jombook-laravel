@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
 
             // Booking Info
-            $table->timestamp('slot'); // timestamp
+            $table->time('slot'); // timestamp
             $table->string('remark')->nullable();
 
             $table->string('submitted')->nullable();
@@ -25,14 +25,12 @@ return new class extends Migration
             $table->timestamp('accepted_at')->nullable();
 
             // Soft Deletes
-            $table->timestamp('deleted_at')->nullable(); 
+            $table->timestamp('deleted_at')->nullable();
 
             // Foreign Keys
             $table->foreignId('user_id')->nullable()->constrained()->onDelete('set null');
             $table->foreignId('branch_id')->nullable()->constrained()->onDelete('set null');
-            $table->foreignId('product_id')->nullable()->constrained()->onDelete('set null'); 
-
-            
+            $table->foreignId('product_id')->nullable()->constrained()->onDelete('set null');
         });
     }
 
