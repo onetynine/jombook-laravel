@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'assets_path' => null,
+    'assets_path' => 'css/filament',
 
     /*
     |--------------------------------------------------------------------------
@@ -71,5 +71,5 @@ return [
 
     'livewire_loading_delay' => 'default',
 
-    
+
 ];
