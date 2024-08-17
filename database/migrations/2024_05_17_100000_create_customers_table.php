@@ -15,15 +15,15 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
-            
+
             // Merchant Info
             $table->string('customer_name');
             $table->string('contact')->unique();
-            $table->string('date_of_birth')->nullable(); // ssm docmentation
+            $table->string('date_of_birth')->nullable();
             $table->string('remark')->nullable();
             $table->string('status')->nullable();
 
-             // Soft Deletes
+            // Soft Deletes
             $table->timestamp('deleted_at')->nullable();
 
 

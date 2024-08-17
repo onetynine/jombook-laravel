@@ -169,7 +169,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\Filament\AdminPanelProvider::class,
         App\Providers\Filament\MerchantPanelProvider::class,
-
+        Filament\FilamentServiceProvider::class,
         App\Providers\Filament\CustomerPanelProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,

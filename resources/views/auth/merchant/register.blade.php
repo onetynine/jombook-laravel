@@ -6,6 +6,8 @@
     <div class="flex justify-center py-8">
         <form class="w-full max-w-6xl" method="POST" action="{{ route('register')}}">
             @csrf
+            <input id="default_role" name="default_role" type="hidden" value="merchant">
+
     <div class="space-y-12 container">
       <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
         <div>
@@ -74,7 +76,12 @@
               <input id="email" placeholder="myemail@mycompany.com" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
             </div>
           </div>
-  
+          <div class="sm:col-span-6">
+            <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+            <div class="mt-2">
+              <input id="password" name="password" type="password"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
         </div>
       </div>
   
